@@ -20,11 +20,18 @@ export class AppComponent {
     new Task('Add README file to last few Angular repos on GitHub', 2)
   ];
 
-  select(task){
+
+  editTask(task) {
     this.selectedTask = task;
   }
 
-  finishedEditing(){
+  addNewTask(task) {
+    console.log(task);
+    this.masterTaskList.push(task);
+  }
+
+  finishedEditing() {
     this.selectedTask = null;
   }
+
 }
